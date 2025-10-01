@@ -1,17 +1,20 @@
+//Shifatpreet Singh exp-10
+// 24070123098 call by refernce
 #include <iostream>
 using namespace std;
-
-void addTen(int x) {
-    x = x + 10;   
-    cout << "Inside function: x = " << x << endl;
+void swap(int *x,int *y){
+    int temp;
+    temp=*x;
+    *x=*y;
+    *y=temp;
 }
-
 int main() {
-    int num = 5;
-
-    cout << "Before function call: num = " << num << endl;
-    addTen(num);   
-    cout << "After function call: num = " << num << endl;
-
-    return 0;
+    int a=20,b=50;
+    swap(&a,&b);
+    cout<<a<<endl<<b;
 }
+/*
+output:
+50
+20
+*/
